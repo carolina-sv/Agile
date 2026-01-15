@@ -1,0 +1,97 @@
+import type { Project, Task, TeamMember } from '@/types';
+
+export const TEAM_MEMBERS: TeamMember[] = [
+  { id: '1', name: 'User 1', avatarUrl: 'https://picsum.photos/seed/1/100/100', skills: ['Frontend', 'UI/UX', 'React'], workload: 60, role: 'Frontend Developer' },
+  { id: '2', name: 'User 2', avatarUrl: 'https://picsum.photos/seed/2/100/100', skills: ['Backend', 'Database', 'Node.js'], workload: 85, role: 'Backend Developer' },
+  { id: '3', name: 'User 3', avatarUrl: 'https://picsum.photos/seed/3/100/100', skills: ['DevOps', 'CI/CD', 'AWS'], workload: 40, role: 'DevOps Engineer' },
+  { id: '4', name: 'User 4', avatarUrl: 'https://picsum.photos/seed/4/100/100', skills: ['Project Management', 'Agile', 'Scrum'], workload: 75, role: 'Project Manager' },
+  { id: '5', name: 'User 5', avatarUrl: 'https://picsum.photos/seed/5/100/100', skills: ['QA', 'Testing', 'Cypress'], workload: 20, role: 'QA Engineer' },
+];
+
+export const PROJECTS: Project[] = [
+  { id: 'PROJ-1', name: 'Website Redesign', description: 'Complete overhaul of the company website.', teamIds: ['1', '2', '4', '5'] },
+  { id: 'PROJ-2', name: 'Mobile App Launch', description: 'Develop and launch the new mobile application.', teamIds: ['1', '2', '3', '4'] },
+];
+
+export const TASKS: Task[] = [
+  {
+    id: 'TASK-1',
+    title: 'Design new homepage mockup',
+    description: 'Create a high-fidelity mockup for the new homepage using Figma. Focus on a clean and modern design.',
+    status: 'To Do',
+    priority: 'High',
+    dueDate: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000).toISOString(),
+    assigneeId: '1',
+    projectId: 'PROJ-1',
+  },
+  {
+    id: 'TASK-2',
+    title: 'Set up staging environment',
+    description: 'Configure the staging server for the website redesign project. Includes database setup and CI/CD pipeline.',
+    status: 'In Progress',
+    priority: 'Urgent',
+    dueDate: new Date(Date.now() + 1 * 24 * 60 * 60 * 1000).toISOString(),
+    assigneeId: '3',
+    projectId: 'PROJ-1',
+  },
+  {
+    id: 'TASK-3',
+    title: 'Develop user authentication API',
+    description: 'Build REST API endpoints for user registration, login, and password reset.',
+    status: 'In Progress',
+    priority: 'High',
+    dueDate: new Date(Date.now() + 5 * 24 * 60 * 60 * 1000).toISOString(),
+    assigneeId: '2',
+    projectId: 'PROJ-2',
+  },
+  {
+    id: 'TASK-4',
+    title: 'Write E2E tests for login flow',
+    description: 'Use Cypress to create end-to-end tests for the entire user authentication flow.',
+    status: 'Backlog',
+    priority: 'Medium',
+    dueDate: new Date(Date.now() + 10 * 24 * 60 * 60 * 1000).toISOString(),
+    assigneeId: '5',
+    projectId: 'PROJ-2',
+  },
+  {
+    id: 'TASK-5',
+    title: 'Review project timeline and milestones',
+    description: 'Meet with stakeholders to review and confirm the project timeline for the Q3 launch.',
+    status: 'Done',
+    priority: 'Medium',
+    dueDate: new Date(Date.now() - 2 * 24 * 60 * 60 * 1000).toISOString(),
+    assigneeId: '4',
+    projectId: 'PROJ-1',
+  },
+  {
+    id: 'TASK-6',
+    title: 'Implement responsive navigation bar',
+    description: 'Code the main navigation component, ensuring it is fully responsive across all target devices.',
+    status: 'To Do',
+    priority: 'High',
+    dueDate: new Date(Date.now() + 4 * 24 * 60 * 60 * 1000).toISOString(),
+    assigneeId: '1',
+    projectId: 'PROJ-1',
+  },
+   {
+    id: 'TASK-7',
+    title: 'Database schema design for mobile app',
+    description: 'Design the initial database schema for the new mobile application. Document all tables and relationships.',
+    status: 'Backlog',
+    priority: 'High',
+    dueDate: new Date(Date.now() + 8 * 24 * 60 * 60 * 1000).toISOString(),
+    assigneeId: null,
+    projectId: 'PROJ-2',
+  },
+  {
+    id: 'TASK-8',
+    title: 'Onboarding tutorial UI',
+    description: 'Design the UI for the mobile app onboarding tutorial.',
+    status: 'Backlog',
+    priority: 'Low',
+    dueDate: new Date(Date.now() + 12 * 24 * 60 * 60 * 1000).toISOString(),
+    assigneeId: null,
+    projectId: 'PROJ-2',
+  },
+];
