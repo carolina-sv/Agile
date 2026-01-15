@@ -52,7 +52,7 @@ Para rodar este projeto localmente, você precisa ter o [Node.js](https://nodejs
 
 1. **Clone o repositório:**
    ```bash
-   git clone [https://github.com/seu-usuario/agile.git](https://github.com/carolina-sv/agile.git)
+   git clone https://github.com/carolina-sv/Agile.git
       ```
 
    
